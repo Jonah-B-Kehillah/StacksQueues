@@ -10,5 +10,7 @@ package com.jonah.stacksqueues;
  * @author jonah
  */
 public class StackQueueTest {
+	public static void main(String[] args){
 	
+	}
 }
