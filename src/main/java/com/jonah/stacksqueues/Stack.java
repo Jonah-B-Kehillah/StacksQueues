@@ -9,6 +9,12 @@ package com.jonah.stacksqueues;
  *
  * @author jonah
  */
-public class Stack {
+public class Stack<AnyType> {
+	
+	private AnyType[] values;
+	
+	public AnyType pop(int index){
+		return null;
+	}
 	
 }
