@@ -9,13 +9,13 @@ package com.jonah.stacksqueues;
  *
  * @author jonah
  */
-public class Queue<AnyType> {
+public class Queue {
 	
 	public void enqueue(int value) {
 		
 	}
-	public AnyType dequeue() {
-		return null;
+	public int dequeue() {
+		return 0;
 	}
 	
 }
