@@ -26,7 +26,7 @@ public class Stack {
 	}
 	
 	public void push(int value) {
-		if(index == size-1) {
+		if(index >= size) {
 			throw new RuntimeException("Stack overflow error");
 		}
 		else {
@@ -35,8 +35,10 @@ public class Stack {
 		}
 	}
 	public void multiPush(Integer[] values){
-		if(values.length > this.getFree()) throw new RuntimeException("Stack overflow error");
-		for(int i = 0; i < values.length; i++) this.push(values[i]);
+		for(int i = 0; i < values.length; i++) {
+			System.out.println(this);
+			this.push(values[i]);
+		}
 	}
 	
 	public int pop(){
