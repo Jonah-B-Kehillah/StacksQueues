@@ -34,11 +34,16 @@ public class Stack {
 			index++;
 		}
 	}
+	public void multiPush(Integer[] values){
+		if(values.length > this.getFree()) throw new RuntimeException("Stack overflow error");
+		for(int i = 0; i < values.length; i++) this.push(values[i]);
+	}
 	
 	public int pop(){
-		int popped_value = this.values[this.index];
+		if (this.index == 0) throw new RuntimeException("Stack underflow error");
+		int popped_value = this.values[this.index-1];
 		this.values[this.index] = 0;
-		index--;
+		this.index--;
 		return popped_value;
 	}
 	
@@ -48,6 +53,14 @@ public class Stack {
 	public int getHead() {
 		if (index < 1) throw new RuntimeException("There are no values in the stack");
 		return this.values[index];
+	}
+	public String toString(){
+		String output = "";
+		for(int i = 0; i < this.values.length; i++) {
+			if(i < index) output += values[i] + " ";
+			else output += "- ";
+		}
+		return output.strip();
 	}
 	// more functions here
 	
