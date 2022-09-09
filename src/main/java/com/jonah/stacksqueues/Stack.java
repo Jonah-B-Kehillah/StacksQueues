@@ -34,7 +34,6 @@ public class Stack {
 	}
 	public void multiPush(Integer[] values){
 		for(int i = 0; i < values.length; i++) {
-			System.out.println(this);
 			this.push(values[i]);
 		}
 	}
