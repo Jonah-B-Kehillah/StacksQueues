@@ -41,7 +41,7 @@ public class Stack {
 	public int pop(){
 		if (this.index == 0) throw new RuntimeException("Stack underflow error");
 		int popped_value = this.values[this.index-1];
-		this.values[this.index] = 0;
+		this.values[this.index-1] = 0;
 		this.index--;
 		return popped_value;
 	}
@@ -51,7 +51,7 @@ public class Stack {
 								this.index;}
 	public int getHead() {
 		if (index < 1) throw new RuntimeException("There are no values in the stack");
-		return this.values[index];
+		return this.values[index-1];
 	}
 	public String toString(){
 		String output = "";
