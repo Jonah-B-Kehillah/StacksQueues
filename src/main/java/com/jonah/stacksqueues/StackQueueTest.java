@@ -19,18 +19,17 @@ public class StackQueueTest {
 	public static void main(String[] args){
 		
 		Stack stack = new Stack((int) Math.round(Math.pow(2, power)));
-		print(Integer.toString(stack.getFree()));
 		
 		Date date = new Date();
 		long time = date.getTime();
-		
-		for(int i = 0; i < (int) Math.round(Math.pow(2, power))-1; i++)
+		for(int i = 0; i < (int) Math.round(Math.pow(2, power)); i++)
 			stack.push(i);
 		Date date2 = new Date();
 		long time2 = date2.getTime();
+		
 		print(Long.toString((time2-time)));
 		
-		print(Integer.toString(stack.getFree()));
+//		print(Integer.toString(stack.getFree()));
 		
 	}
 	
